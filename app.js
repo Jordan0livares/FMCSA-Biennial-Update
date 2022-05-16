@@ -9,7 +9,7 @@ const biennialUpdate = dotNum => {
     if(typeof dotNum !== 'number') return 'Numbers only.';
 
     const numArr = Array.from(String(dotNum), Number);
-    if(numArr.length >= 9) return 'Invalid Number';
+    if(numArr.length >= 9 || numArr.length <= 1) return 'Invalid Number';
 
     const lastNum = numArr.pop();
     const secondToLastNum = numArr.pop();
@@ -28,3 +28,4 @@ console.log(biennialUpdate(324510));
 console.log(biennialUpdate(324529));
 console.log(biennialUpdate('Not a Number!'));
 console.log(biennialUpdate(98764556876567876));
+console.log(biennialUpdate(000000));
